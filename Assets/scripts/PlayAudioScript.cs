@@ -5,19 +5,33 @@ using UnityEngine.UI;
 
 public class PlayAudioScript : MonoBehaviour
 {
-    AudioSource audioSource;
-    public GameObject audioObject;
+    public Button clickBtn;
+    public Button errorBtn;
+    public Button keyboardBtn;
+
+    public SoundManager soundManager;
+
 
     private void Awake()
     {
-        audioSource = audioObject.GetComponent<AudioSource>();
-        GetComponent<Button>().onClick.AddListener(PlaySound);
+        clickBtn.onClick.AddListener(Click);
+        errorBtn.onClick.AddListener(Error);
+        keyboardBtn.onClick.AddListener(Keyboard);
     }
 
 
-    private void PlaySound()
+    private void Click()
     {
-        Debug.Log("CLICK!!");
-        audioSource.Play();
+        soundManager.PlayClickSound();
+    }
+
+    private void Error()
+    {
+        soundManager.PlayErrorSound();
+    }
+
+    private void Keyboard()
+    {
+        soundManager.PlayKeyboardSound();
     }
 }
