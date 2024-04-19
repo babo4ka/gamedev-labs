@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7778da832b02a3645a19cf17e67c978c, type: 3}
   m_Name: SoundParameters
   m_EditorClassIdentifier: 
+  clickClip: {fileID: 8300000, guid: e855b338bcf4ed542b59a0c7aba8244c, type: 3}
+  errorClickClip: {fileID: 8300000, guid: bc0a007c04eefd743a148ac2896fd7f8, type: 3}
+  keyboardSoundClip: {fileID: 8300000, guid: 24f099c87754d254c9cd1faf217b4b45, type: 3}
